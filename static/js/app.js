@@ -32,9 +32,8 @@ function charts(sample){
                 marker: {
                     size: sampleValues,
                     color: otuIDs,
-                    colorscale: "Earth"
+                    colorscale: "YlGnBu"
                 }
-
             }
         ]
         Plotly.newPlot("bubble", bubbleData, bubbleLayout)
@@ -68,6 +67,11 @@ function metadata(sample){
             panel.append("h6").text(`${key.toUpperCase()}: ${result[key]}`)
         }
     })
+}
+
+function optionChanged(nextSample){
+    charts(nextSample);
+    metadata(nextSample);
 }
 
 init();
