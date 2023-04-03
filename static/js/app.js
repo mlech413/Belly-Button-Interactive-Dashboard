@@ -20,6 +20,7 @@ function charts(sample){
         let otuLabels = result.otu_labels;
         let sampleValues = result.sample_values;
         let bubbleLayout = {
+            margin: {t: 0},
             hovermode: "closest",
             xaxis: {title: "OTU ID"}
         };
