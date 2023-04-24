@@ -67,6 +67,7 @@ function metadata(sample){
         for(key in result){
             panel.append("h6").text(`${key.toUpperCase()}: ${result[key]}`)
         }
+        buildGauge(result.wfreq);
     })
 }
 
